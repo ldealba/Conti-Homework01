@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Tab01 : UIViewController
+@interface Tab01 : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+//Tables
+@property (strong, nonatomic) IBOutlet UITableView *tblStates;
+
 
 @end

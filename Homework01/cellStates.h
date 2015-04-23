@@ -10,4 +10,9 @@
 
 @interface cellStates : UITableViewCell
 
+//Labels
+@property (strong, nonatomic) IBOutlet UILabel *lblState;
+@property (strong, nonatomic) IBOutlet UILabel *lblCapital;
+
+
 @end

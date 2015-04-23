@@ -8,6 +8,9 @@
 
 #import "Declarations.h"
 
+NSMutableArray *maStates;
+NSMutableArray *maCapitals;
+
 @implementation Declarations
 
 @end
