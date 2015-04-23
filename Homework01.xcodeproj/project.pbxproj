@@ -15,6 +15,10 @@
 		D1D5C2E91AE932B3002FF0D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1D5C2E81AE932B3002FF0D3 /* Images.xcassets */; };
 		D1D5C2EC1AE932B3002FF0D3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D5C2EA1AE932B3002FF0D3 /* LaunchScreen.xib */; };
 		D1D5C2F81AE932B3002FF0D3 /* Homework01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C2F71AE932B3002FF0D3 /* Homework01Tests.m */; };
+		D1D5C3041AE933C0002FF0D3 /* Tab01.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C3031AE933C0002FF0D3 /* Tab01.m */; };
+		D1D5C3071AE933D4002FF0D3 /* Tab02.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C3061AE933D4002FF0D3 /* Tab02.m */; };
+		D1D5C30C1AE9364B002FF0D3 /* Declarations.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C30B1AE9364B002FF0D3 /* Declarations.m */; };
+		D1D5C3111AE93EA0002FF0D3 /* cellStates.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C3101AE93EA0002FF0D3 /* cellStates.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,14 @@
 		D1D5C2F11AE932B3002FF0D3 /* Homework01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Homework01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D5C2F61AE932B3002FF0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1D5C2F71AE932B3002FF0D3 /* Homework01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Homework01Tests.m; sourceTree = "<group>"; };
+		D1D5C3021AE933C0002FF0D3 /* Tab01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab01.h; sourceTree = "<group>"; };
+		D1D5C3031AE933C0002FF0D3 /* Tab01.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab01.m; sourceTree = "<group>"; };
+		D1D5C3051AE933D4002FF0D3 /* Tab02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab02.h; sourceTree = "<group>"; };
+		D1D5C3061AE933D4002FF0D3 /* Tab02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab02.m; sourceTree = "<group>"; };
+		D1D5C30A1AE9364B002FF0D3 /* Declarations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Declarations.h; sourceTree = "<group>"; };
+		D1D5C30B1AE9364B002FF0D3 /* Declarations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Declarations.m; sourceTree = "<group>"; };
+		D1D5C30F1AE93EA0002FF0D3 /* cellStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cellStates.h; sourceTree = "<group>"; };
+		D1D5C3101AE93EA0002FF0D3 /* cellStates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cellStates.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +95,11 @@
 		D1D5C2D71AE932B3002FF0D3 /* Homework01 */ = {
 			isa = PBXGroup;
 			children = (
-				D1D5C2DC1AE932B3002FF0D3 /* AppDelegate.h */,
-				D1D5C2DD1AE932B3002FF0D3 /* AppDelegate.m */,
-				D1D5C2E21AE932B3002FF0D3 /* ViewController.h */,
-				D1D5C2E31AE932B3002FF0D3 /* ViewController.m */,
+				D1D5C30D1AE93C62002FF0D3 /* imgs */,
+				D1D5C3081AE934B2002FF0D3 /* Main */,
+				D1D5C3091AE934C4002FF0D3 /* Controllers */,
+				D1D5C30E1AE93E60002FF0D3 /* Customized */,
+				D1D5C3011AE93395002FF0D3 /* Tab-Bar */,
 				D1D5C2E51AE932B3002FF0D3 /* Main.storyboard */,
 				D1D5C2E81AE932B3002FF0D3 /* Images.xcassets */,
 				D1D5C2EA1AE932B3002FF0D3 /* LaunchScreen.xib */,
@@ -120,6 +133,53 @@
 				D1D5C2F61AE932B3002FF0D3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1D5C3011AE93395002FF0D3 /* Tab-Bar */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5C3021AE933C0002FF0D3 /* Tab01.h */,
+				D1D5C3031AE933C0002FF0D3 /* Tab01.m */,
+				D1D5C3051AE933D4002FF0D3 /* Tab02.h */,
+				D1D5C3061AE933D4002FF0D3 /* Tab02.m */,
+			);
+			name = "Tab-Bar";
+			sourceTree = "<group>";
+		};
+		D1D5C3081AE934B2002FF0D3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5C2DC1AE932B3002FF0D3 /* AppDelegate.h */,
+				D1D5C2DD1AE932B3002FF0D3 /* AppDelegate.m */,
+				D1D5C30A1AE9364B002FF0D3 /* Declarations.h */,
+				D1D5C30B1AE9364B002FF0D3 /* Declarations.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		D1D5C3091AE934C4002FF0D3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5C2E21AE932B3002FF0D3 /* ViewController.h */,
+				D1D5C2E31AE932B3002FF0D3 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D1D5C30D1AE93C62002FF0D3 /* imgs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = imgs;
+			sourceTree = "<group>";
+		};
+		D1D5C30E1AE93E60002FF0D3 /* Customized */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5C30F1AE93EA0002FF0D3 /* cellStates.h */,
+				D1D5C3101AE93EA0002FF0D3 /* cellStates.m */,
+			);
+			name = Customized;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +283,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D5C2DE1AE932B3002FF0D3 /* AppDelegate.m in Sources */,
+				D1D5C3041AE933C0002FF0D3 /* Tab01.m in Sources */,
 				D1D5C2E11AE932B3002FF0D3 /* Homework01.xcdatamodeld in Sources */,
+				D1D5C3111AE93EA0002FF0D3 /* cellStates.m in Sources */,
+				D1D5C30C1AE9364B002FF0D3 /* Declarations.m in Sources */,
+				D1D5C3071AE933D4002FF0D3 /* Tab02.m in Sources */,
 				D1D5C2E41AE932B3002FF0D3 /* ViewController.m in Sources */,
 				D1D5C2DB1AE932B3002FF0D3 /* main.m in Sources */,
 			);
