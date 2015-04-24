@@ -7,7 +7,7 @@
 //
 
 #import "Tab01.h"
-#import "Tab01Details.h"
+#import "Tab01_Selected.h"
 #import "cellStates.h"
 #import "Declarations.h"
 
@@ -119,11 +119,21 @@
 //-------------------------------------------------------------------------------
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"Row = %d", (int)indexPath.row);
+    miIndex     = (int)indexPath.row;
+    
+    Tab01_Selected *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Tab01_Selected"];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+//-------------------------------------------------------------------------------
+/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     NSLog(@"didSelectRowAtIndexPath");
     Tab01Details *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Tab01Details"];
     //[self.navigationController pushViewController:viewController animated:YES];
     [self presentViewController:viewController animated:YES completion:nil];
-}
+}*/
 
 /*
  YourViewControllerClass *viewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"ViewController"];

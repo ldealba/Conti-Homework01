@@ -15,6 +15,7 @@ NSMutableArray *maPopulation;
 
 NSUserDefaults *mUserDefaults;
 
+int            miIndex;
 @implementation Declarations
 
 @end

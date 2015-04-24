@@ -25,6 +25,7 @@ extern NSMutableArray *maStates;
 extern NSMutableArray *maCapitals;
 extern NSMutableArray *maPO;
 extern NSMutableArray *maPopulation;
+extern int            miIndex;
 
 extern NSUserDefaults *mUserDefaults;
 
