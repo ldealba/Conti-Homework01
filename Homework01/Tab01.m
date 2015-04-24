@@ -30,6 +30,7 @@
 {
     maStates    = [NSMutableArray arrayWithObjects: nInitialStates];
     maCapitals  = [NSMutableArray arrayWithObjects: nInitialsCapitals];
+    maPO        = [NSMutableArray arrayWithObjects: nInitialsPOs];
 }
 /******************************************************************************
  Table functions
@@ -65,6 +66,7 @@
     
     cell.lblState.text      = maStates[indexPath.row];
     cell.lblCapital.text    = maCapitals[indexPath.row];
+    cell.lblPO.text         = maPO[indexPath.row];
     return cell;
 }
 /******************************************************************************
@@ -72,6 +74,7 @@
  ******************************************************************************/
 - (IBAction)btnAddPressed:(id)sender
 {
+    [self.tblStates reloadData];
     [self createPopin];
 }
 /**********************************************************************************************

@@ -11,6 +11,7 @@
 //States and capitals
 #define     nInitialStates      @"Jalisco", @"Sinaloa",@"Sonora",@"Nayarit",@"Michoacán",nil
 #define     nInitialsCapitals   @"Guadalajara", @"Culiacán",@"Hermosillo",@"Tepic",@"Morelia",nil
+#define     nInitialsPOs        @"45136", @"80180",@"90123",@"56789",@"32145",nil
 
 //Cells features
 #define     nCellStatesHeight   64
@@ -21,6 +22,7 @@
 
 extern NSMutableArray *maStates;
 extern NSMutableArray *maCapitals;
+extern NSMutableArray *maPO;
 
 @interface Declarations : NSObject
 

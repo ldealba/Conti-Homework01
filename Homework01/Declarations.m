@@ -10,6 +10,7 @@
 
 NSMutableArray *maStates;
 NSMutableArray *maCapitals;
+NSMutableArray *maPO;
 
 @implementation Declarations
 

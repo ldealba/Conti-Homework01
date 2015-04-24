@@ -13,6 +13,7 @@
 //Labels
 @property (strong, nonatomic) IBOutlet UILabel *lblState;
 @property (strong, nonatomic) IBOutlet UILabel *lblCapital;
+@property (strong, nonatomic) IBOutlet UILabel *lblPO;
 
 
 @end

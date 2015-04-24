@@ -33,6 +33,7 @@
 int     iKeyboardHeight;
 int     iKeyboardWidth;
 
+BOOL    boAllTxts       = nTextEmpty;
 BOOL    boTxtState      = nTextEmpty;
 BOOL    boTxtCapital    = nTextEmpty;
 BOOL    boTxtPO         = nTextEmpty;
@@ -90,6 +91,9 @@ BOOL    boTxtPO         = nTextEmpty;
  **********************************************************************************************/
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
+    int x = (int)range.length;
+    NSLog(@"x = %d", x);
+    
     NSLog(@"Some text changed");
     if (textField == self.txtState)
     {
@@ -98,6 +102,7 @@ BOOL    boTxtPO         = nTextEmpty;
         if ([newString length] > nTextEmpty)
         {
             boTxtState      = nTextNoEmpty;
+            self.txtState.backgroundColor = [UIColor lightGrayColor];
             if ([newString length] > nTxtStateMaxLenght)
             {
                 return NO;
@@ -116,6 +121,7 @@ BOOL    boTxtPO         = nTextEmpty;
         if ([newString length] > nTextEmpty)
         {
             boTxtCapital      = nTextNoEmpty;
+            self.txtCapital.backgroundColor = [UIColor lightGrayColor];
             if ([newString length] > nTxtCapitalMaxLenght)
             {
                 return NO;
@@ -134,6 +140,7 @@ BOOL    boTxtPO         = nTextEmpty;
         if ([newString length] > nTextEmpty)
         {
             boTxtPO         = nTextNoEmpty;
+            self.txtPO.backgroundColor = [UIColor lightGrayColor];
             if ([newString length] > nTxtPOMaxLenght)
             {
                 return NO;
@@ -157,6 +164,30 @@ BOOL    boTxtPO         = nTextEmpty;
 
 - (IBAction)btnSavePressed:(id)sender
 {
+    if ((boTxtCapital == nTextEmpty) || (boTxtState == nTextEmpty) || (boTxtPO == nTextEmpty))
+    {//At least one of the text is empty
+        if (boTxtState == nTextEmpty)
+        {
+            self.txtState.backgroundColor = [UIColor redColor];
+        }
+        if (boTxtCapital == nTextEmpty)
+        {
+            self.txtCapital.backgroundColor = [UIColor redColor];
+        }
+        if (boTxtPO == nTextEmpty)
+        {
+            self.txtPO.backgroundColor = [UIColor redColor];
+        }
+    }
+    else
+    {//All text have info
+        NSLog(@"Ready for saving");
+        [maStates addObject:self.txtState.text];
+        [maCapitals addObject:self.txtCapital.text];
+        [maPO addObject:self.txtPO.text];
+        [self.presentingPopinViewController dismissCurrentPopinControllerAnimated:YES completion:nil];
+    }
+    
 }
 
 

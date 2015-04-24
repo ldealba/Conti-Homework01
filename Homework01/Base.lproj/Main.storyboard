@@ -61,9 +61,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guadalajara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7dv-6F-cTn" userLabel="lblCapital">
-                                                    <rect key="frame" x="120" y="21" width="120" height="21"/>
+                                                    <rect key="frame" x="120" y="8" width="120" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45136" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="drX-of-5qT" userLabel="lblPO">
+                                                    <rect key="frame" x="120" y="28" width="120" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -71,6 +78,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lblCapital" destination="7dv-6F-cTn" id="GBm-mm-IsL"/>
+                                            <outlet property="lblPO" destination="drX-of-5qT" id="D5K-uu-Qjd"/>
                                             <outlet property="lblState" destination="ClQ-7s-H4l" id="3Md-cd-cxd"/>
                                         </connections>
                                     </tableViewCell>
