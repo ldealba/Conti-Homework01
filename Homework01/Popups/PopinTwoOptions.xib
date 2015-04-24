@@ -9,6 +9,7 @@
                 <outlet property="svMain" destination="bjq-b5-EE4" id="yHB-fp-g6e"/>
                 <outlet property="txtCapital" destination="SjP-1z-VVc" id="lA1-C4-1zH"/>
                 <outlet property="txtPO" destination="THF-c9-Ij7" id="tbu-Z9-rJU"/>
+                <outlet property="txtPopulation" destination="4mB-HO-R9E" id="YPt-6Z-cvC"/>
                 <outlet property="txtState" destination="Zr8-QE-0hV" id="NMU-NW-OPh"/>
                 <outlet property="vMain" destination="bYM-EJ-FVI" id="15S-kO-qHI"/>
                 <outlet property="view" destination="4gr-8Z-YI8" id="2Ll-rO-u2e"/>
@@ -24,7 +25,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="bYM-EJ-FVI" userLabel="vMain">
-                            <rect key="frame" x="17" y="120" width="286" height="300"/>
+                            <rect key="frame" x="17" y="90" width="286" height="360"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agregar Estado y Capital" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ybi-b8-VUt">
@@ -64,9 +65,19 @@
                                         <outlet property="delegate" destination="-1" id="s41-9V-XEi"/>
                                     </connections>
                                 </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Población" minimumFontSize="17" id="4mB-HO-R9E" userLabel="txtPopulation">
+                                    <rect key="frame" x="43" y="222" width="200" height="42"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="JbE-ZN-n3q"/>
+                                    </connections>
+                                </textField>
                                 <view contentMode="scaleToFill" id="DxR-WW-e8X" userLabel="vConfirmBtns">
-                                    <rect key="frame" x="0.0" y="236" width="286" height="64"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <rect key="frame" x="0.0" y="296" width="286" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SPh-17-hjf" userLabel="lblBckgBtn">
                                             <rect key="frame" x="0.0" y="0.0" width="286" height="64"/>

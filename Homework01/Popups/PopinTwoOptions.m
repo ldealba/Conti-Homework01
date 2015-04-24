@@ -29,6 +29,7 @@
 #define nTxtStateMaxLenght      50
 #define nTxtCapitalMaxLenght    50
 #define nTxtPOMaxLenght         5
+#define nTxtMaxPopulation       10
 
 int     iKeyboardHeight;
 int     iKeyboardWidth;
@@ -37,6 +38,7 @@ BOOL    boAllTxts       = nTextEmpty;
 BOOL    boTxtState      = nTextEmpty;
 BOOL    boTxtCapital    = nTextEmpty;
 BOOL    boTxtPO         = nTextEmpty;
+BOOL    boTxtPopulation = nTextEmpty;
 
 
 
@@ -82,9 +84,18 @@ BOOL    boTxtPO         = nTextEmpty;
     
     NSLog(@"height = %d, width  %d", iKeyboardHeight, iKeyboardWidth);
     
-    self.svMain.contentSize = CGSizeMake(self.svMain.frame.size.width, self.svMain.frame.size.height + iKeyboardHeight/2  + 10);
-    
-    [self.svMain setContentOffset: CGPointMake(0,iKeyboardHeight - (self.view.frame.size.height - self.vMain.frame.size.height)/2 + 10)  animated:YES];    
+    if (self.txtState.isEditing)
+    {
+        self.svMain.contentSize = CGSizeMake(self.svMain.frame.size.width, self.svMain.frame.size.height + iKeyboardHeight/2  + 10);
+        
+        [self.svMain setContentOffset: CGPointMake(0, 124) animated:YES];
+    }
+    else
+    {
+        self.svMain.contentSize = CGSizeMake(self.svMain.frame.size.width, self.svMain.frame.size.height + iKeyboardHeight/2  + 10);
+        
+        [self.svMain setContentOffset: CGPointMake(0,iKeyboardHeight - (self.view.frame.size.height - self.vMain.frame.size.height)/2 + 10)  animated:YES];
+    }
 }
 /**********************************************************************************************
  Text Fields
@@ -152,6 +163,25 @@ BOOL    boTxtPO         = nTextEmpty;
         }
         return YES;
     }
+    else if (textField == self.txtPopulation)
+    {
+        NSLog(@"txtState");
+        NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+        if ([newString length] > nTextEmpty)
+        {
+            boTxtPopulation     = nTextNoEmpty;
+            self.txtPopulation.backgroundColor = [UIColor lightGrayColor];
+            if ([newString length] > nTxtMaxPopulation)
+            {
+                return NO;
+            }
+        }
+        else
+        {
+            boTxtPopulation      = nTextEmpty;
+        }
+        return YES;
+    }
     return NO;
 }
 /**********************************************************************************************
@@ -164,7 +194,7 @@ BOOL    boTxtPO         = nTextEmpty;
 
 - (IBAction)btnSavePressed:(id)sender
 {
-    if ((boTxtCapital == nTextEmpty) || (boTxtState == nTextEmpty) || (boTxtPO == nTextEmpty))
+    if ((boTxtCapital == nTextEmpty) || (boTxtState == nTextEmpty) || (boTxtPO == nTextEmpty) || (boTxtPopulation == nTextEmpty) )
     {//At least one of the text is empty
         if (boTxtState == nTextEmpty)
         {
@@ -177,6 +207,10 @@ BOOL    boTxtPO         = nTextEmpty;
         if (boTxtPO == nTextEmpty)
         {
             self.txtPO.backgroundColor = [UIColor redColor];
+        }
+        if (boTxtPopulation == nTextEmpty)
+        {
+            self.txtPopulation.backgroundColor = [UIColor redColor];
         }
     }
     else
@@ -192,13 +226,18 @@ BOOL    boTxtPO         = nTextEmpty;
         maPO            = [[NSMutableArray arrayWithArray:maPO] mutableCopy];
         [maPO addObject:self.txtPO.text];
         
+        maPopulation    = [[NSMutableArray arrayWithArray:maPopulation] mutableCopy];
+        [maPopulation addObject:self.txtPopulation.text];
+        
         [mUserDefaults setObject: maStates forKey: @"permStates"];
         [mUserDefaults setObject: maCapitals forKey: @"permCapitals"];
         [mUserDefaults setObject: maPO forKey: @"permPOs"];
+        [mUserDefaults setObject: maPopulation forKey: @"permPopulation"];
         
         NSLog(@"permStates = %@", [mUserDefaults objectForKey:@"permStates"]);
         NSLog(@"permCapitals = %@", [mUserDefaults objectForKey:@"permCapitals"]);
         NSLog(@"permPOs = %@", [mUserDefaults objectForKey:@"permPOs"]);
+        NSLog(@"permPOs = %@", [mUserDefaults objectForKey:@"permPopulation"]);
         
         [self.presentingPopinViewController dismissCurrentPopinControllerAnimated:YES completion:nil];
     }

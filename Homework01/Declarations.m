@@ -11,6 +11,7 @@
 NSMutableArray *maStates;
 NSMutableArray *maCapitals;
 NSMutableArray *maPO;
+NSMutableArray *maPopulation;
 
 NSUserDefaults *mUserDefaults;
 

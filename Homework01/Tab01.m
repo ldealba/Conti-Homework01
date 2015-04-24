@@ -7,6 +7,7 @@
 //
 
 #import "Tab01.h"
+#import "Tab01Details.h"
 #import "cellStates.h"
 #import "Declarations.h"
 
@@ -43,7 +44,7 @@
     {//No info has been stored before
         maStates        = [NSMutableArray arrayWithObjects: nInitialStates];
     }
-    
+//-----------------------------------------
     if (!(nil == [mUserDefaults objectForKey:@"permCapitals"]) && !([@"" isEqual:[mUserDefaults objectForKey:@"permCapitals"]]))
     {//Case when varaibel has some value in permanent phone memory
         maCapitals    = [mUserDefaults objectForKey:@"permCapitals"];
@@ -52,7 +53,7 @@
     {//No info has been stored before
         maCapitals        = [NSMutableArray arrayWithObjects: nInitialsCapitals];
     }
-    
+//-----------------------------------------
     if (!(nil == [mUserDefaults objectForKey:@"permPOs"]) && !([@"" isEqual:[mUserDefaults objectForKey:@"permPOs"]]))
     {//Case when varaibel has some value in permanent phone memory
         maPO    = [mUserDefaults objectForKey:@"permPOs"];
@@ -61,7 +62,16 @@
     {//No info has been stored before
         maPO        = [NSMutableArray arrayWithObjects: nInitialsPOs];
     }
-    
+//-----------------------------------------
+    if (!(nil == [mUserDefaults objectForKey:@"permPopulation"]) && !([@"" isEqual:[mUserDefaults objectForKey:@"permPopulation"]]))
+    {//Case when varaibel has some value in permanent phone memory
+        maPopulation    = [mUserDefaults objectForKey:@"permPopulation"];
+    }
+    else
+    {//No info has been stored before
+        maPopulation    = [NSMutableArray arrayWithObjects: nInitialsPopulation];
+    }
+//-----------------------------------------
     [self.tblStates reloadData];
 }
 - (void)Tab01Active:(NSNotification *)notification
@@ -103,8 +113,21 @@
     cell.lblState.text      = maStates[indexPath.row];
     cell.lblCapital.text    = maCapitals[indexPath.row];
     cell.lblPO.text         = maPO[indexPath.row];
+    cell.lblPopulation.text = maPopulation[indexPath.row];
     return cell;
 }
+//-------------------------------------------------------------------------------
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"didSelectRowAtIndexPath");
+    Tab01Details *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"Tab01Details"];
+    //[self.navigationController pushViewController:viewController animated:YES];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+/*
+ YourViewControllerClass *viewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"ViewController"];
+ */
 /******************************************************************************
  Button functions
  ******************************************************************************/
@@ -134,6 +157,7 @@
     [popin setPopinTransitionDirection:BKTPopinTransitionDirectionTop];
     [self presentPopinController:popin animated:YES completion:nil];
 }
+
 /*
 #pragma mark - Navigation
 

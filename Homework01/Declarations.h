@@ -12,6 +12,7 @@
 #define     nInitialStates      @"Jalisco", @"Sinaloa",@"Sonora",@"Nayarit",@"Michoacán",nil
 #define     nInitialsCapitals   @"Guadalajara", @"Culiacán",@"Hermosillo",@"Tepic",@"Morelia",nil
 #define     nInitialsPOs        @"45136", @"80180",@"90123",@"56789",@"32145",nil
+#define     nInitialsPopulation @"10,123,467", @"4,000,000",@"3,987,345",@"1,234,567",@"2,456,789",nil
 
 //Cells features
 #define     nCellStatesHeight   64
@@ -23,6 +24,7 @@
 extern NSMutableArray *maStates;
 extern NSMutableArray *maCapitals;
 extern NSMutableArray *maPO;
+extern NSMutableArray *maPopulation;
 
 extern NSUserDefaults *mUserDefaults;
 

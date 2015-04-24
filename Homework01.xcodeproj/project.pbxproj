@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1BD6A661AEAA046009DE4B4 /* Tab01Details.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A651AEAA046009DE4B4 /* Tab01Details.m */; };
 		D1D5C2DB1AE932B3002FF0D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C2DA1AE932B3002FF0D3 /* main.m */; };
 		D1D5C2DE1AE932B3002FF0D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C2DD1AE932B3002FF0D3 /* AppDelegate.m */; };
 		D1D5C2E11AE932B3002FF0D3 /* Homework01.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C2DF1AE932B3002FF0D3 /* Homework01.xcdatamodeld */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D1BD6A641AEAA046009DE4B4 /* Tab01Details.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab01Details.h; sourceTree = "<group>"; };
+		D1BD6A651AEAA046009DE4B4 /* Tab01Details.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab01Details.m; sourceTree = "<group>"; };
 		D1D5C2D51AE932B3002FF0D3 /* Homework01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D5C2D91AE932B3002FF0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1D5C2DA1AE932B3002FF0D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				D1D5C3031AE933C0002FF0D3 /* Tab01.m */,
 				D1D5C3051AE933D4002FF0D3 /* Tab02.h */,
 				D1D5C3061AE933D4002FF0D3 /* Tab02.m */,
+				D1BD6A641AEAA046009DE4B4 /* Tab01Details.h */,
+				D1BD6A651AEAA046009DE4B4 /* Tab01Details.m */,
 			);
 			name = "Tab-Bar";
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 			files = (
 				D1D5C2DE1AE932B3002FF0D3 /* AppDelegate.m in Sources */,
 				D1D5C3161AE957F5002FF0D3 /* UIViewController+MaryPopin.m in Sources */,
+				D1BD6A661AEAA046009DE4B4 /* Tab01Details.m in Sources */,
 				D1D5C3041AE933C0002FF0D3 /* Tab01.m in Sources */,
 				D1D5C2E11AE932B3002FF0D3 /* Homework01.xcdatamodeld in Sources */,
 				D1D5C3111AE93EA0002FF0D3 /* cellStates.m in Sources */,
@@ -524,6 +530,7 @@
 				D1D5C2FD1AE932B3002FF0D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1D5C2FE1AE932B3002FF0D3 /* Build configuration list for PBXNativeTarget "Homework01Tests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +539,7 @@
 				D1D5C3001AE932B3002FF0D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

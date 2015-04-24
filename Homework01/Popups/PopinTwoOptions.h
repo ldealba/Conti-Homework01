@@ -44,6 +44,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtState;
 @property (strong, nonatomic) IBOutlet UITextField *txtCapital;
 @property (strong, nonatomic) IBOutlet UITextField *txtPO;
+@property (strong, nonatomic) IBOutlet UITextField *txtPopulation;
 
 
 @end
