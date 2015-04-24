@@ -37,6 +37,25 @@
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)btnSharePressed:(id)sender
+{
+    NSString                    *stMsg;
+    NSArray                     *aItems;
+    UIImage                     *imgShare;
+    UIActivityViewController    *aVC;
+    
+    imgShare    = [UIImage imageNamed:@"Continental_logo.jpg"];
+    stMsg       = @"Hola desde mi curso de iOS en Continental";
+    
+    aItems      = @[imgShare, stMsg];
+    
+    aVC         = [[UIActivityViewController alloc] initWithActivityItems:aItems applicationActivities:nil];
+    
+    aVC.excludedActivityTypes = [NSArray arrayWithObjects:UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeCopyToPasteboard, UIActivityTypeAirDrop, nil];
+    
+    [self presentViewController:aVC animated:YES completion:nil];
+}
 /*
 #pragma mark - Navigation
 

@@ -194,6 +194,16 @@
                                     <action selector="btnBackPressed:" destination="nU4-1E-4rU" eventType="touchUpInside" id="wUb-Yb-XmP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="OmU-50-kFl" userLabel="btnShare">
+                                <rect key="frame" x="79" y="363" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Compartir">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSharePressed:" destination="nU4-1E-4rU" eventType="touchUpInside" id="HPF-rq-dqa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2144153416" green="0.67197918889999997" blue="0.26817053559999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>

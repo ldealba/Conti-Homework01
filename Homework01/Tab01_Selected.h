@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
 
 @interface Tab01_Selected : UIViewController
 
@@ -19,5 +21,6 @@
 
 //Actions
 - (IBAction)btnBackPressed:(id)sender;
+- (IBAction)btnSharePressed:(id)sender;
 
 @end

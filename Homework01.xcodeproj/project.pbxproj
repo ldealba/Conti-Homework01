@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D1BD6A661AEAA046009DE4B4 /* Tab01Details.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A651AEAA046009DE4B4 /* Tab01Details.m */; };
 		D1BD6A691AEAAD98009DE4B4 /* Tab01_Selected.m in Sources */ = {isa = PBXBuildFile; fileRef = D1BD6A681AEAAD98009DE4B4 /* Tab01_Selected.m */; };
+		D1BD6A6B1AEAB5E2009DE4B4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BD6A6A1AEAB5E2009DE4B4 /* Social.framework */; };
+		D1BD6A6D1AEAB5F0009DE4B4 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BD6A6C1AEAB5F0009DE4B4 /* Accounts.framework */; };
+		D1BD6A6F1AEAB774009DE4B4 /* Continental_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1BD6A6E1AEAB774009DE4B4 /* Continental_logo.jpg */; };
 		D1D5C2DB1AE932B3002FF0D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C2DA1AE932B3002FF0D3 /* main.m */; };
 		D1D5C2DE1AE932B3002FF0D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C2DD1AE932B3002FF0D3 /* AppDelegate.m */; };
 		D1D5C2E11AE932B3002FF0D3 /* Homework01.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C2DF1AE932B3002FF0D3 /* Homework01.xcdatamodeld */; };
@@ -41,6 +44,9 @@
 		D1BD6A651AEAA046009DE4B4 /* Tab01Details.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab01Details.m; sourceTree = "<group>"; };
 		D1BD6A671AEAAD98009DE4B4 /* Tab01_Selected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab01_Selected.h; sourceTree = "<group>"; };
 		D1BD6A681AEAAD98009DE4B4 /* Tab01_Selected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab01_Selected.m; sourceTree = "<group>"; };
+		D1BD6A6A1AEAB5E2009DE4B4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D1BD6A6C1AEAB5F0009DE4B4 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		D1BD6A6E1AEAB774009DE4B4 /* Continental_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Continental_logo.jpg; path = img/Continental_logo.jpg; sourceTree = "<group>"; };
 		D1D5C2D51AE932B3002FF0D3 /* Homework01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D5C2D91AE932B3002FF0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1D5C2DA1AE932B3002FF0D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -75,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1BD6A6D1AEAB5F0009DE4B4 /* Accounts.framework in Frameworks */,
+				D1BD6A6B1AEAB5E2009DE4B4 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +99,8 @@
 		D1D5C2CC1AE932B3002FF0D3 = {
 			isa = PBXGroup;
 			children = (
+				D1BD6A6C1AEAB5F0009DE4B4 /* Accounts.framework */,
+				D1BD6A6A1AEAB5E2009DE4B4 /* Social.framework */,
 				D1D5C2D71AE932B3002FF0D3 /* Homework01 */,
 				D1D5C2F41AE932B3002FF0D3 /* Homework01Tests */,
 				D1D5C2D61AE932B3002FF0D3 /* Products */,
@@ -189,6 +199,7 @@
 		D1D5C30D1AE93C62002FF0D3 /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				D1BD6A6E1AEAB774009DE4B4 /* Continental_logo.jpg */,
 			);
 			name = imgs;
 			sourceTree = "<group>";
@@ -311,6 +322,7 @@
 			files = (
 				D1D5C2E71AE932B3002FF0D3 /* Main.storyboard in Resources */,
 				D1D5C31C1AE95BBF002FF0D3 /* PopinTwoOptions.xib in Resources */,
+				D1BD6A6F1AEAB774009DE4B4 /* Continental_logo.jpg in Resources */,
 				D1D5C2EC1AE932B3002FF0D3 /* LaunchScreen.xib in Resources */,
 				D1D5C2E91AE932B3002FF0D3 /* Images.xcassets in Resources */,
 			);
