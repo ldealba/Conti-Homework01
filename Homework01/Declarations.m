@@ -12,6 +12,8 @@ NSMutableArray *maStates;
 NSMutableArray *maCapitals;
 NSMutableArray *maPO;
 
+NSUserDefaults *mUserDefaults;
+
 @implementation Declarations
 
 @end

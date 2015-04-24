@@ -182,9 +182,24 @@ BOOL    boTxtPO         = nTextEmpty;
     else
     {//All text have info
         NSLog(@"Ready for saving");
+        
+        maStates        = [[NSMutableArray arrayWithArray:maStates] mutableCopy];
         [maStates addObject:self.txtState.text];
+        
+        maCapitals      = [[NSMutableArray arrayWithArray:maCapitals] mutableCopy];
         [maCapitals addObject:self.txtCapital.text];
+        
+        maPO            = [[NSMutableArray arrayWithArray:maPO] mutableCopy];
         [maPO addObject:self.txtPO.text];
+        
+        [mUserDefaults setObject: maStates forKey: @"permStates"];
+        [mUserDefaults setObject: maCapitals forKey: @"permCapitals"];
+        [mUserDefaults setObject: maPO forKey: @"permPOs"];
+        
+        NSLog(@"permStates = %@", [mUserDefaults objectForKey:@"permStates"]);
+        NSLog(@"permCapitals = %@", [mUserDefaults objectForKey:@"permCapitals"]);
+        NSLog(@"permPOs = %@", [mUserDefaults objectForKey:@"permPOs"]);
+        
         [self.presentingPopinViewController dismissCurrentPopinControllerAnimated:YES completion:nil];
     }
     

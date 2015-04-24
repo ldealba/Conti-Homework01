@@ -28,9 +28,45 @@
 //-----------------------------------------
 - (void)initController
 {
-    maStates    = [NSMutableArray arrayWithObjects: nInitialStates];
-    maCapitals  = [NSMutableArray arrayWithObjects: nInitialsCapitals];
-    maPO        = [NSMutableArray arrayWithObjects: nInitialsPOs];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(Tab01Active:)
+                                                 name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+    mUserDefaults   = [NSUserDefaults standardUserDefaults];
+    
+    
+    if (!(nil == [mUserDefaults objectForKey:@"permStates"]) && !([@"" isEqual:[mUserDefaults objectForKey:@"permStates"]]))
+    {//Case when varaibel has some value in permanent phone memory
+        maStates    = [mUserDefaults objectForKey:@"permStates"];
+    }
+    else
+    {//No info has been stored before
+        maStates        = [NSMutableArray arrayWithObjects: nInitialStates];
+    }
+    
+    if (!(nil == [mUserDefaults objectForKey:@"permCapitals"]) && !([@"" isEqual:[mUserDefaults objectForKey:@"permCapitals"]]))
+    {//Case when varaibel has some value in permanent phone memory
+        maCapitals    = [mUserDefaults objectForKey:@"permCapitals"];
+    }
+    else
+    {//No info has been stored before
+        maCapitals        = [NSMutableArray arrayWithObjects: nInitialsCapitals];
+    }
+    
+    if (!(nil == [mUserDefaults objectForKey:@"permPOs"]) && !([@"" isEqual:[mUserDefaults objectForKey:@"permPOs"]]))
+    {//Case when varaibel has some value in permanent phone memory
+        maPO    = [mUserDefaults objectForKey:@"permPOs"];
+    }
+    else
+    {//No info has been stored before
+        maPO        = [NSMutableArray arrayWithObjects: nInitialsPOs];
+    }
+    
+    [self.tblStates reloadData];
+}
+- (void)Tab01Active:(NSNotification *)notification
+{
+    NSLog(@"Tab01Active");
 }
 /******************************************************************************
  Table functions

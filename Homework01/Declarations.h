@@ -24,6 +24,8 @@ extern NSMutableArray *maStates;
 extern NSMutableArray *maCapitals;
 extern NSMutableArray *maPO;
 
+extern NSUserDefaults *mUserDefaults;
+
 @interface Declarations : NSObject
 
 @end
