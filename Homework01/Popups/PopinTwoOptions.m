@@ -23,8 +23,21 @@
 
 #import "PopinTwoOptions.h"
 
+#define nTextEmpty              0
+#define nTextNoEmpty            1
+
+#define nTxtStateMaxLenght      50
+#define nTxtCapitalMaxLenght    50
+#define nTxtPOMaxLenght         5
+
 int     iKeyboardHeight;
 int     iKeyboardWidth;
+
+BOOL    boTxtState      = nTextEmpty;
+BOOL    boTxtCapital    = nTextEmpty;
+BOOL    boTxtPO         = nTextEmpty;
+
+
 
 @interface PopinTwoOptions ()
 @end
@@ -48,6 +61,13 @@ int     iKeyboardWidth;
 {
     //Add a notification to let app know when the keyboard appears, so the texts move accordingly
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    
+    
+    self.vMain.layer.borderColor  = [UIColor clearColor].CGColor;
+    self.vMain.layer.borderWidth  = 1.0;
+    self.vMain.clipsToBounds      = YES;
+    self.vMain.layer.cornerRadius = 8;
+
 }
 /**********************************************************************************************
  Keyboard appears and disappears
@@ -61,30 +81,71 @@ int     iKeyboardWidth;
     
     NSLog(@"height = %d, width  %d", iKeyboardHeight, iKeyboardWidth);
     
-    self.svMain.contentSize = CGSizeMake(self.svMain.frame.size.width, self.svMain.frame.size.height + iKeyboardHeight  + 10);
+    self.svMain.contentSize = CGSizeMake(self.svMain.frame.size.width, self.svMain.frame.size.height + iKeyboardHeight/2  + 10);
     
-    [self.svMain setContentOffset: CGPointMake(0,iKeyboardHeight - (self.view.frame.size.height - self.vMain.frame.size.height)/2 + 10)  animated:YES];
-    
-    
-    
-
-    
-    
-    
-
-    
-    /*if (self.txtState.isEditing)
+    [self.svMain setContentOffset: CGPointMake(0,iKeyboardHeight - (self.view.frame.size.height - self.vMain.frame.size.height)/2 + 10)  animated:YES];    
+}
+/**********************************************************************************************
+ Text Fields
+ **********************************************************************************************/
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSLog(@"Some text changed");
+    if (textField == self.txtState)
     {
-        self.svProfile.contentSize = CGSizeMake(self.svProfile.frame.size.width, self.svProfile.frame.size.height + iKeyboardHeight - (self.view.frame.size.height-self.svProfile.frame.size.height)/2 + 10);
-        [self.svProfile setContentOffset: CGPointMake(0,iKeyboardHeight - (self.view.frame.size.height-self.vProfile.frame.size.height)/2 + 10)  animated:YES];
+        NSLog(@"txtState");
+        NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+        if ([newString length] > nTextEmpty)
+        {
+            boTxtState      = nTextNoEmpty;
+            if ([newString length] > nTxtStateMaxLenght)
+            {
+                return NO;
+            }
+        }
+        else
+        {
+            boTxtState      = nTextEmpty;
+        }
+        return YES;
     }
-    else
+    else if (textField == self.txtCapital)
     {
-        self.svProfile.contentSize = CGSizeMake(self.svProfile.frame.size.width, self.svProfile.frame.size.height + iKeyboardHeight - (self.view.frame.size.height-self.vProfile.frame.size.height)/2 + 10);
-        [self.svProfile setContentOffset: CGPointMake(0,184)  animated:YES];
-    }*/
-    
-    
+        NSLog(@"txtCapital");
+        NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+        if ([newString length] > nTextEmpty)
+        {
+            boTxtCapital      = nTextNoEmpty;
+            if ([newString length] > nTxtCapitalMaxLenght)
+            {
+                return NO;
+            }
+        }
+        else
+        {
+            boTxtCapital      = nTextEmpty;
+        }
+        return YES;
+    }
+    else if (textField == self.txtPO)
+    {
+        NSLog(@"txtState");
+        NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+        if ([newString length] > nTextEmpty)
+        {
+            boTxtPO         = nTextNoEmpty;
+            if ([newString length] > nTxtPOMaxLenght)
+            {
+                return NO;
+            }
+        }
+        else
+        {
+            boTxtPO      = nTextEmpty;
+        }
+        return YES;
+    }
+    return NO;
 }
 /**********************************************************************************************
  Buttons functions
