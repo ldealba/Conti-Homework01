@@ -6,6 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopinTwoOptions">
             <connections>
+                <outlet property="svMain" destination="bjq-b5-EE4" id="yHB-fp-g6e"/>
+                <outlet property="txtCapital" destination="SjP-1z-VVc" id="lA1-C4-1zH"/>
+                <outlet property="txtPO" destination="THF-c9-Ij7" id="tbu-Z9-rJU"/>
+                <outlet property="txtState" destination="Zr8-QE-0hV" id="NMU-NW-OPh"/>
+                <outlet property="vMain" destination="bYM-EJ-FVI" id="15S-kO-qHI"/>
                 <outlet property="view" destination="4gr-8Z-YI8" id="2Ll-rO-u2e"/>
             </connections>
         </placeholder>
@@ -32,6 +37,7 @@
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Estado de la República" minimumFontSize="17" id="Zr8-QE-0hV" userLabel="txtState">
                                     <rect key="frame" x="43" y="72" width="200" height="42"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     <connections>
@@ -39,8 +45,9 @@
                                     </connections>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ciudad Capital" minimumFontSize="17" id="SjP-1z-VVc" userLabel="txtCapital">
-                                    <rect key="frame" x="43" y="112" width="200" height="42"/>
+                                    <rect key="frame" x="43" y="122" width="200" height="42"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
@@ -48,8 +55,9 @@
                                     </connections>
                                 </textField>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Código Postal" minimumFontSize="17" id="THF-c9-Ij7" userLabel="txtPO">
-                                    <rect key="frame" x="43" y="152" width="200" height="42"/>
+                                    <rect key="frame" x="43" y="172" width="200" height="42"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     <connections>
@@ -103,7 +111,7 @@
                                                 <action selector="btnCancelPressed:" destination="-1" eventType="touchUpInside" id="feN-tA-u8T"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="IGt-mO-9hd" userLabel="btnConfirm">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="IGt-mO-9hd" userLabel="btnSave">
                                             <rect key="frame" x="143" y="0.0" width="140" height="64"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                             <color key="tintColor" red="0.18417386760000001" green="0.6539121416" blue="0.93113469500000001" alpha="1" colorSpace="deviceRGB"/>
@@ -122,6 +130,9 @@
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Izs-LG-aZb"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

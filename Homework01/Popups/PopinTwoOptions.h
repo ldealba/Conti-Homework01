@@ -33,6 +33,19 @@
 - (IBAction)btnCancelPressed:(id)sender;
 - (IBAction)btnSavePressed:(id)sender;
 
+//Scrollviews
+@property (strong, nonatomic) IBOutlet UIScrollView *svMain;
+
+//Views
+@property (strong, nonatomic) IBOutlet UIView *vMain;
+
+
+//Texts
+@property (strong, nonatomic) IBOutlet UITextField *txtState;
+@property (strong, nonatomic) IBOutlet UITextField *txtCapital;
+@property (strong, nonatomic) IBOutlet UITextField *txtPO;
+
+
 @end
 
 

@@ -23,6 +23,8 @@
 
 #import "PopinTwoOptions.h"
 
+int     iKeyboardHeight;
+int     iKeyboardWidth;
 
 @interface PopinTwoOptions ()
 @end
@@ -44,7 +46,45 @@
  **********************************************************************************************/
 - (void) initViewController
 {
-    //Google Analytics
+    //Add a notification to let app know when the keyboard appears, so the texts move accordingly
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+}
+/**********************************************************************************************
+ Keyboard appears and disappears
+ **********************************************************************************************/
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    NSLog(@"keyboardDidShow");
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    iKeyboardHeight     = MIN(keyboardSize.height,keyboardSize.width);
+    iKeyboardWidth      = MAX(keyboardSize.height,keyboardSize.width);
+    
+    NSLog(@"height = %d, width  %d", iKeyboardHeight, iKeyboardWidth);
+    
+    self.svMain.contentSize = CGSizeMake(self.svMain.frame.size.width, self.svMain.frame.size.height + iKeyboardHeight  + 10);
+    
+    [self.svMain setContentOffset: CGPointMake(0,iKeyboardHeight - (self.view.frame.size.height - self.vMain.frame.size.height)/2 + 10)  animated:YES];
+    
+    
+    
+
+    
+    
+    
+
+    
+    /*if (self.txtState.isEditing)
+    {
+        self.svProfile.contentSize = CGSizeMake(self.svProfile.frame.size.width, self.svProfile.frame.size.height + iKeyboardHeight - (self.view.frame.size.height-self.svProfile.frame.size.height)/2 + 10);
+        [self.svProfile setContentOffset: CGPointMake(0,iKeyboardHeight - (self.view.frame.size.height-self.vProfile.frame.size.height)/2 + 10)  animated:YES];
+    }
+    else
+    {
+        self.svProfile.contentSize = CGSizeMake(self.svProfile.frame.size.width, self.svProfile.frame.size.height + iKeyboardHeight - (self.view.frame.size.height-self.vProfile.frame.size.height)/2 + 10);
+        [self.svProfile setContentOffset: CGPointMake(0,184)  animated:YES];
+    }*/
+    
+    
 }
 /**********************************************************************************************
  Buttons functions
