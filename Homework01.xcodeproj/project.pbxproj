@@ -19,6 +19,9 @@
 		D1D5C3071AE933D4002FF0D3 /* Tab02.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C3061AE933D4002FF0D3 /* Tab02.m */; };
 		D1D5C30C1AE9364B002FF0D3 /* Declarations.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C30B1AE9364B002FF0D3 /* Declarations.m */; };
 		D1D5C3111AE93EA0002FF0D3 /* cellStates.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C3101AE93EA0002FF0D3 /* cellStates.m */; };
+		D1D5C3161AE957F5002FF0D3 /* UIViewController+MaryPopin.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C3151AE957F5002FF0D3 /* UIViewController+MaryPopin.m */; };
+		D1D5C31B1AE95BBF002FF0D3 /* PopinTwoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D5C3191AE95BBF002FF0D3 /* PopinTwoOptions.m */; };
+		D1D5C31C1AE95BBF002FF0D3 /* PopinTwoOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D5C31A1AE95BBF002FF0D3 /* PopinTwoOptions.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,11 @@
 		D1D5C30B1AE9364B002FF0D3 /* Declarations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Declarations.m; sourceTree = "<group>"; };
 		D1D5C30F1AE93EA0002FF0D3 /* cellStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cellStates.h; sourceTree = "<group>"; };
 		D1D5C3101AE93EA0002FF0D3 /* cellStates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cellStates.m; sourceTree = "<group>"; };
+		D1D5C3141AE957F5002FF0D3 /* UIViewController+MaryPopin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MaryPopin.h"; sourceTree = "<group>"; };
+		D1D5C3151AE957F5002FF0D3 /* UIViewController+MaryPopin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MaryPopin.m"; sourceTree = "<group>"; };
+		D1D5C3181AE95BBF002FF0D3 /* PopinTwoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopinTwoOptions.h; sourceTree = "<group>"; };
+		D1D5C3191AE95BBF002FF0D3 /* PopinTwoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopinTwoOptions.m; sourceTree = "<group>"; };
+		D1D5C31A1AE95BBF002FF0D3 /* PopinTwoOptions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopinTwoOptions.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +103,13 @@
 		D1D5C2D71AE932B3002FF0D3 /* Homework01 */ = {
 			isa = PBXGroup;
 			children = (
-				D1D5C30D1AE93C62002FF0D3 /* imgs */,
+				D1D5C3121AE957E4002FF0D3 /* Classes */,
 				D1D5C3081AE934B2002FF0D3 /* Main */,
+				D1D5C3171AE95BBF002FF0D3 /* Popups */,
 				D1D5C3091AE934C4002FF0D3 /* Controllers */,
 				D1D5C30E1AE93E60002FF0D3 /* Customized */,
 				D1D5C3011AE93395002FF0D3 /* Tab-Bar */,
+				D1D5C30D1AE93C62002FF0D3 /* imgs */,
 				D1D5C2E51AE932B3002FF0D3 /* Main.storyboard */,
 				D1D5C2E81AE932B3002FF0D3 /* Images.xcassets */,
 				D1D5C2EA1AE932B3002FF0D3 /* LaunchScreen.xib */,
@@ -180,6 +190,33 @@
 				D1D5C3101AE93EA0002FF0D3 /* cellStates.m */,
 			);
 			name = Customized;
+			sourceTree = "<group>";
+		};
+		D1D5C3121AE957E4002FF0D3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5C3131AE957F5002FF0D3 /* MaryPopin */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D1D5C3131AE957F5002FF0D3 /* MaryPopin */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5C3141AE957F5002FF0D3 /* UIViewController+MaryPopin.h */,
+				D1D5C3151AE957F5002FF0D3 /* UIViewController+MaryPopin.m */,
+			);
+			path = MaryPopin;
+			sourceTree = "<group>";
+		};
+		D1D5C3171AE95BBF002FF0D3 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5C3181AE95BBF002FF0D3 /* PopinTwoOptions.h */,
+				D1D5C3191AE95BBF002FF0D3 /* PopinTwoOptions.m */,
+				D1D5C31A1AE95BBF002FF0D3 /* PopinTwoOptions.xib */,
+			);
+			path = Popups;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D5C2E71AE932B3002FF0D3 /* Main.storyboard in Resources */,
+				D1D5C31C1AE95BBF002FF0D3 /* PopinTwoOptions.xib in Resources */,
 				D1D5C2EC1AE932B3002FF0D3 /* LaunchScreen.xib in Resources */,
 				D1D5C2E91AE932B3002FF0D3 /* Images.xcassets in Resources */,
 			);
@@ -283,9 +321,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D5C2DE1AE932B3002FF0D3 /* AppDelegate.m in Sources */,
+				D1D5C3161AE957F5002FF0D3 /* UIViewController+MaryPopin.m in Sources */,
 				D1D5C3041AE933C0002FF0D3 /* Tab01.m in Sources */,
 				D1D5C2E11AE932B3002FF0D3 /* Homework01.xcdatamodeld in Sources */,
 				D1D5C3111AE93EA0002FF0D3 /* cellStates.m in Sources */,
+				D1D5C31B1AE95BBF002FF0D3 /* PopinTwoOptions.m in Sources */,
 				D1D5C30C1AE9364B002FF0D3 /* Declarations.m in Sources */,
 				D1D5C3071AE933D4002FF0D3 /* Tab02.m in Sources */,
 				D1D5C2E41AE932B3002FF0D3 /* ViewController.m in Sources */,

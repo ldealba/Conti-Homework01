@@ -31,6 +31,9 @@
     maStates    = [NSMutableArray arrayWithObjects: nInitialStates];
     maCapitals  = [NSMutableArray arrayWithObjects: nInitialsCapitals];
 }
+/******************************************************************************
+ Table functions
+******************************************************************************/
 //-----------------------------------------
 //Table functions
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -45,7 +48,7 @@
 //-------------------------------------------------------------------------------
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 64;
+    return nCellStatesHeight;
 }
 //-------------------------------------------------------------------------------
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,9 +63,38 @@
         cell = [[cellStates alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    cell.lblState.text      = maStates[indexPath.row];
+    cell.lblCapital.text    = maCapitals[indexPath.row];
     return cell;
 }
-
+/******************************************************************************
+ Button functions
+ ******************************************************************************/
+- (IBAction)btnAddPressed:(id)sender
+{
+    [self createPopin];
+}
+/**********************************************************************************************
+ Popin View Controller
+ **********************************************************************************************/
+- (void) createPopin
+{//-------------------------------------------------------------------------------
+    PopinTwoOptions *popin = [[PopinTwoOptions alloc] init];
+    [popin setPopinTransitionStyle:BKTPopinTransitionStyleZoom];
+    [popin setPopinTransitionDirection:BKTPopinTransitionDirectionTop];
+    [popin setPopinAlignment:0];
+    
+    BKTBlurParameters *blurParameters       = [BKTBlurParameters new];
+    blurParameters.alpha                    = 1.0f;
+    blurParameters.radius                   = 8.0f;
+    blurParameters.saturationDeltaFactor    = 1.8f;
+    blurParameters.tintColor                = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:0.50];
+    [popin setBlurParameters:blurParameters];
+    [popin setPopinOptions:[popin popinOptions]|BKTPopinBlurryDimmingView];
+    [popin setPreferedPopinContentSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height)];
+    [popin setPopinTransitionDirection:BKTPopinTransitionDirectionTop];
+    [self presentPopinController:popin animated:YES completion:nil];
+}
 /*
 #pragma mark - Navigation
 
@@ -72,5 +104,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

@@ -12,6 +12,13 @@
 #define     nInitialStates      @"Jalisco", @"Sinaloa",@"Sonora",@"Nayarit",@"Michoacán",nil
 #define     nInitialsCapitals   @"Guadalajara", @"Culiacán",@"Hermosillo",@"Tepic",@"Morelia",nil
 
+//Cells features
+#define     nCellStatesHeight   64
+
+
+//Colors
+#define     nBlackTransparency  colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.50
+
 extern NSMutableArray *maStates;
 extern NSMutableArray *maCapitals;
 

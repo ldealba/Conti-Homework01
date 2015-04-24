@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIViewController+MaryPopin.h"
+#import "PopinTwoOptions.h"
 
 @interface Tab01 : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 //Tables
 @property (strong, nonatomic) IBOutlet UITableView *tblStates;
+
+//Actions
+- (IBAction)btnAddPressed:(id)sender;
 
 
 @end
